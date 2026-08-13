@@ -20,6 +20,9 @@
   --goth: 'Pirata One', 'Oswald', serif;
 
   --wrap: 1180px;
+
+  /* Flecha de descarga, usada como máscara para poder recolorearla */
+  --dl-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12'/%3E%3Cpath d='M7 11l5 5 5-5'/%3E%3Cpath d='M4 20h16'/%3E%3C/svg%3E");
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -576,6 +579,36 @@ ul{ list-style:none; margin:0; padding:0; }
 }
 .gi:hover::after{ opacity:1; }
 
+/* Botón de descarga sobre cada cartel.
+   El icono va en el CSS para no repetir el SVG 16 veces en el HTML. */
+.gi-dl{
+  position:absolute; right:8px; bottom:8px; z-index:2;
+  width:38px; height:38px;
+  display:grid; place-items:center;
+  background:rgba(8,7,10,.82); border:1px solid var(--borde);
+  backdrop-filter:blur(4px);
+  transition:opacity .3s, transform .3s, background .25s, border-color .25s;
+}
+.gi-dl::before{
+  content:''; width:19px; height:19px;
+  background:var(--hueso); transition:background .25s;
+  -webkit-mask:var(--dl-icon) center/contain no-repeat;
+          mask:var(--dl-icon) center/contain no-repeat;
+}
+.gi-dl:hover{ background:var(--sangre); border-color:var(--sangre-viva); transform:scale(1.08); }
+.gi-dl:hover::before{ background:#fff; }
+.gi-dl:focus-visible{ outline:2px solid var(--sangre-viva); outline-offset:2px; }
+
+/* Con mouse aparece al pasar encima; en táctil siempre visible. */
+@media (hover:hover){
+  .gi-dl{ opacity:0; transform:translateY(6px); }
+  .gi:hover .gi-dl,
+  .gi-dl:focus-visible{ opacity:1; transform:none; }
+}
+@media (hover:none){
+  .gi-dl{ opacity:.92; width:34px; height:34px; }
+}
+
 
 /* ═══════ LUGAR ═══════ */
 
@@ -674,6 +707,19 @@ ul{ list-style:none; margin:0; padding:0; }
 .lb-prev{ left:8px; } .lb-next{ right:8px; }
 .lb-close:hover{ color:var(--sangre-viva); transform:rotate(90deg); }
 .lb-nav:hover{ color:var(--sangre-viva); }
+
+.lb-dl{
+  position:absolute; bottom:22px; left:50%; transform:translateX(-50%);
+  display:inline-flex; align-items:center; gap:9px;
+  padding:11px 22px;
+  background:rgba(8,7,10,.85); color:var(--hueso);
+  border:1px solid var(--sangre);
+  font-family:var(--disp); font-size:.74rem; font-weight:600;
+  letter-spacing:.2em; text-transform:uppercase;
+  backdrop-filter:blur(6px);
+  transition:background .25s, color .25s, box-shadow .25s;
+}
+.lb-dl:hover{ background:var(--sangre); color:#fff; box-shadow:0 0 26px rgba(224,27,36,.4); }
 
 
 /* ═══════ REVEAL ═══════

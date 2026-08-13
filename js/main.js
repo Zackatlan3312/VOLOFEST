@@ -179,6 +179,7 @@
   /* ─────── LIGHTBOX DE CARTELERA ─────── */
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lbImg');
+  var lbDl = document.getElementById('lbDl');
   var shots = Array.prototype.slice.call(
     document.querySelectorAll('#gallery .gi img')
   );
@@ -188,6 +189,14 @@
     idx = (i + shots.length) % shots.length;
     lbImg.src = shots[idx].src;
     lbImg.alt = shots[idx].alt;
+
+    /* El botón de descarga reusa el enlace de la tarjeta, así el
+       nombre del archivo es el mismo en la galería y en el lightbox. */
+    var card = shots[idx].parentElement.querySelector('.gi-dl');
+    if (card) {
+      lbDl.href = card.getAttribute('href');
+      lbDl.setAttribute('download', card.getAttribute('download'));
+    }
   }
 
   function openLb(i) {
@@ -203,8 +212,15 @@
   }
 
   shots.forEach(function (img, i) {
-    img.parentElement.addEventListener('click', function () { openLb(i); });
+    img.parentElement.addEventListener('click', function (e) {
+      /* Descargar no debe abrir el lightbox. */
+      if (e.target.closest('.gi-dl')) return;
+      openLb(i);
+    });
   });
+
+  /* Ni cerrarlo cuando se descarga desde adentro. */
+  lbDl.addEventListener('click', function (e) { e.stopPropagation(); });
 
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbPrev').addEventListener('click', function (e) {
