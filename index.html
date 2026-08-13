@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLOFEST 2026 · La Voloband — 24 de Octubre</title>
+
+<meta name="description" content="VOLOFEST — El gran evento de aniversario de La Voloband. Sábado 24 de octubre de 2026, Jardín y Salón de Fiestas Las Garzas, Veracruz. Seren, Elefantes de Dalí, Fuimos Ácidos, Sheriff y La Voloband. Ven disfrazado.">
+<meta name="theme-color" content="#08070a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="VOLOFEST 2026 — The Final Chapter">
+<meta property="og:description" content="El gran evento de aniversario de La Voloband. 24 de octubre · Las Garzas, Veracruz. Ven disfrazado y págala más barata.">
+<meta property="og:image" content="https://volofest.lavoloband.com/assets/posters/esqueleto.jpg">
+<meta property="og:url" content="https://volofest.lavoloband.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Pirata+One&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════ TEXTURAS GLOBALES ══════════ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="lightning" id="lightning" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="bat-layer" id="batLayer" aria-hidden="true"></div>
+
+<!-- ══════════ LOADER ══════════ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <img src="assets/brand/volofest-logo.jpg" alt="" class="loader-logo">
+    <p class="loader-txt">ABRIENDO LA CRIPTA<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
+  </div>
+</div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand" aria-label="VOLOFEST inicio">
+    <img src="assets/brand/volofest-logo.jpg" alt="VOLOFEST">
+  </a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#evento">El Evento</a></li>
+    <li><a href="#lineup">Line-Up</a></li>
+    <li><a href="#boletos">Boletos</a></li>
+    <li><a href="#cartelera">Cartelera</a></li>
+    <li><a href="#lugar">Lugar</a></li>
+    <li class="nav-cta-li">
+      <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20mis%20boletos%20para%20el%20VOLOFEST%20%F0%9F%A6%87" target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.81.83-3.02-.2-.31A8.2 8.2 0 1 1 12 20.2"/></svg>
+        Boletos
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="top">
+  <div class="hero-bg" data-parallax>
+    <img src="assets/posters/esqueleto.jpg" alt="" class="hero-img">
+  </div>
+  <div class="hero-fade"></div>
+
+  <div class="hero-content">
+    <p class="hero-kicker"><span class="line"></span> LA VOLOBAND PRESENTA <span class="line"></span></p>
+
+    <img src="assets/brand/volofest-logo.jpg" alt="VOLOFEST" class="hero-logo flicker">
+
+    <p class="hero-sub" data-glitch="THE FINAL CHAPTER">THE FINAL CHAPTER</p>
+    <p class="hero-tag">EL GRAN EVENTO DE ANIVERSARIO · EDICIÓN HALLOWEEN</p>
+
+    <div class="hero-date">
+      <div class="hd-block">
+        <span class="hd-num">24</span>
+        <span class="hd-lbl">OCT</span>
+      </div>
+      <div class="hd-meta">
+        <p><strong>SÁBADO</strong></p>
+        <p>6:00 PM — 1:00 AM</p>
+        <p class="hd-place">Salón Las Garzas · Veracruz</p>
+      </div>
+    </div>
+
+    <!-- CUENTA REGRESIVA -->
+    <div class="countdown" id="countdown" aria-label="Cuenta regresiva para el evento">
+      <div class="cd-unit"><span class="cd-num" id="cdD">--</span><span class="cd-lbl">Días</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cdH">--</span><span class="cd-lbl">Horas</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cdM">--</span><span class="cd-lbl">Min</span></div>
+      <span class="cd-sep">:</span>
+      <div class="cd-unit"><span class="cd-num" id="cdS">--</span><span class="cd-lbl">Seg</span></div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20mis%20boletos%20para%20el%20VOLOFEST%20%F0%9F%A6%87" target="_blank" rel="noopener" class="btn btn-blood">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.81.83-3.02-.2-.31A8.2 8.2 0 1 1 12 20.2"/></svg>
+        Apartar boletos
+      </a>
+      <a href="#lineup" class="btn btn-ghost">Ver line-up</a>
+    </div>
+
+    <p class="hero-note">🎃 Ven disfrazado y págala más barata</p>
+  </div>
+
+  <a href="#evento" class="scroll-hint" aria-label="Bajar">
+    <span class="sh-line"></span>
+  </a>
+</header>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>VOLOFEST ✞ 24 OCT 2026 ✞ VEN DISFRAZADO ✞ LAS GARZAS ✞ VOLOFEST ✞ 24 OCT 2026 ✞ VEN DISFRAZADO ✞ LAS GARZAS ✞ </span>
+    <span aria-hidden="true">VOLOFEST ✞ 24 OCT 2026 ✞ VEN DISFRAZADO ✞ LAS GARZAS ✞ VOLOFEST ✞ 24 OCT 2026 ✞ VEN DISFRAZADO ✞ LAS GARZAS ✞ </span>
+  </div>
+</div>
+
+<!-- ══════════ EL EVENTO ══════════ -->
+<section class="section" id="evento">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Todo volován es comido</p>
+    <h2 class="title" data-reveal data-glitch="EL EVENTO">EL EVENTO</h2>
+
+    <div class="evento-grid">
+      <div class="evento-txt" data-reveal>
+        <p class="lead">
+          Una noche. Cinco bandas. Un aniversario que se celebra como se debe:
+          a oscuras, con disfraz y a todo volumen.
+        </p>
+        <p>
+          El <strong>VOLOFEST</strong> es el gran evento de aniversario de <strong>La Voloband</strong>,
+          y este año lo llevamos a temática de Halloween y disfraces. Siete horas de música en vivo,
+          bandas invitadas de la escena veracruzana, y una producción pensada para que no quieras irte.
+        </p>
+        <p>
+          Sonido por <strong>Raúl David</strong>. Organizado por <strong>La Voloband</strong> y allegados.
+        </p>
+      </div>
+
+      <ul class="info-cards">
+        <li class="ic" data-reveal>
+          <span class="ic-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <h3>Fecha</h3>
+          <p>Sábado <strong>24 de octubre</strong>, 2026</p>
+        </li>
+        <li class="ic" data-reveal>
+          <span class="ic-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <h3>Horario</h3>
+          <p><strong>6:00 PM</strong> a <strong>1:00 AM</strong></p>
+        </li>
+        <li class="ic" data-reveal>
+          <span class="ic-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Lugar</h3>
+          <p>Jardín y Salón de Fiestas <strong>Las Garzas</strong></p>
+        </li>
+        <li class="ic ic-hl" data-reveal>
+          <span class="ic-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8s2-3 8-3 8 3 8 3-1 4-1.5 7c-.3 1.8-2 3-3.5 2.5-1.2-.4-1.5-1.5-3-1.5s-1.8 1.1-3 1.5C7.5 19 5.8 17.8 5.5 16 5 13 4 8 4 8z"/><circle cx="9" cy="10.5" r="1.2" fill="currentColor"/><circle cx="15" cy="10.5" r="1.2" fill="currentColor"/></svg>
+          </span>
+          <h3>Disfraz</h3>
+          <p>Temática libre de <strong>terror y disfraces</strong>. Hay cláusula: te sale más barato.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SANGRE DIVISORIA ══════════ -->
+<div class="blood-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+    <path d="M0,0 H1200 V18 c-30,0 -30,14 -60,14 s-30,-14 -60,-14 -28,26 -56,26 -26,-26 -54,-26 -32,18 -62,18 -30,-18 -60,-18 -28,30 -58,30 -28,-30 -58,-30 -34,16 -64,16 -28,-16 -58,-16 -30,24 -60,24 -28,-24 -58,-24 -32,12 -62,12 -30,-12 -60,-12 -30,20 -60,20 -30,-20 -60,-20 z"/>
+  </svg>
+</div>
+
+<!-- ══════════ LINE-UP ══════════ -->
+<section class="section section-alt" id="lineup">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Cinco bandas, una noche</p>
+    <h2 class="title" data-reveal data-glitch="LINE-UP">LINE-UP</h2>
+
+    <div class="lineup-grid">
+      <article class="band band-head" data-reveal>
+        <div class="band-logo band-logo-lvb">
+          <img src="assets/brand/lavoloband.png" alt="La Voloband">
+        </div>
+        <h3>La Voloband</h3>
+        <p class="band-role">Los del aniversario</p>
+        <span class="band-badge">Headliner</span>
+      </article>
+
+      <article class="band" data-reveal>
+        <div class="band-logo"><img src="assets/logos/sheriff.jpg" alt="Sheriff"></div>
+        <h3>Sheriff</h3>
+        <p class="band-role">Banda invitada</p>
+      </article>
+
+      <article class="band" data-reveal>
+        <div class="band-logo"><img src="assets/logos/fuimos-acidos.jpg" alt="Fuimos Ácidos"></div>
+        <h3>Fuimos Ácidos</h3>
+        <p class="band-role">Banda invitada</p>
+      </article>
+
+      <article class="band" data-reveal>
+        <div class="band-logo"><img src="assets/logos/elefantes-de-dali.jpg" alt="Elefantes de Dalí"></div>
+        <h3>Elefantes de Dalí</h3>
+        <p class="band-role">Banda invitada</p>
+      </article>
+
+      <article class="band" data-reveal>
+        <div class="band-logo"><img src="assets/logos/srn.jpg" alt="Seren"></div>
+        <h3>Seren <span class="band-alt">(SRN)</span></h3>
+        <p class="band-role">Banda invitada</p>
+      </article>
+    </div>
+
+    <p class="lineup-foot" data-reveal>Sonido por <strong>Raúl David</strong></p>
+  </div>
+</section>
+
+<!-- ══════════ BOLETOS ══════════ -->
+<section class="section" id="boletos">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Entre más tardes, más caro</p>
+    <h2 class="title" data-reveal data-glitch="BOLETOS">BOLETOS</h2>
+
+    <div class="price-grid">
+
+      <article class="price price-first" data-reveal>
+        <span class="price-flag">Primeros 50</span>
+        <h3 class="price-name">Preventa</h3>
+        <p class="price-amt"><span class="cur">$</span>90</p>
+        <p class="price-desc">Solo los primeros <strong>50 boletos</strong>. Cuando se acaban, se acaban.</p>
+        <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20boletos%20de%20PREVENTA%20(%2490)%20para%20el%20VOLOFEST" target="_blank" rel="noopener" class="price-btn">Apartar</a>
+      </article>
+
+      <article class="price" data-reveal>
+        <h3 class="price-name">Venta general</h3>
+        <p class="price-amt"><span class="cur">$</span>120</p>
+        <p class="price-desc">Precio normal en preventa, antes del día del evento.</p>
+        <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20boletos%20de%20VENTA%20GENERAL%20(%24120)%20para%20el%20VOLOFEST" target="_blank" rel="noopener" class="price-btn">Apartar</a>
+      </article>
+
+      <article class="price price-door" data-reveal>
+        <span class="price-flag price-flag-alt">Cláusula del disfraz</span>
+        <h3 class="price-name">Día del evento</h3>
+        <div class="price-split">
+          <div>
+            <p class="price-amt sm"><span class="cur">$</span>150</p>
+            <p class="ps-lbl">Con disfraz 🎃</p>
+          </div>
+          <span class="ps-div"></span>
+          <div>
+            <p class="price-amt sm dim"><span class="cur">$</span>180</p>
+            <p class="ps-lbl">Sin disfraz</p>
+          </div>
+        </div>
+        <p class="price-desc">En la puerta, el 24 de octubre. Disfrázate y te ahorras <strong>$30</strong>.</p>
+      </article>
+
+      <article class="price price-table" data-reveal>
+        <span class="price-flag price-flag-gold">Para el combo</span>
+        <h3 class="price-name">Mesa</h3>
+        <p class="price-amt"><span class="cur">$</span>1,200</p>
+        <ul class="price-list">
+          <li>Mesa con <strong>4 sillas</strong></li>
+          <li><strong>4 boletos</strong> de acceso al evento</li>
+          <li>Una <strong>botella a elección</strong></li>
+          <li>1 servicio <span class="muted">(refresco y agua mineral)</span></li>
+          <li>Hielo</li>
+          <li>Shots de bienvenida</li>
+          <li>Plato de snacks</li>
+        </ul>
+        <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20una%20MESA%20(%241200)%20para%20el%20VOLOFEST" target="_blank" rel="noopener" class="price-btn price-btn-gold">Apartar mesa</a>
+      </article>
+
+    </div>
+
+    <div class="ticket-strip" data-reveal>
+      <img src="assets/brand/boleto.jpg" alt="Boleto VOLOFEST 24.10.2026">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TICKER 2 ══════════ -->
+<div class="ticker ticker-red">
+  <div class="ticker-track reverse">
+    <span>🦇 APARTA POR WHATSAPP · 229 270 8672 · 🦇 APARTA POR WHATSAPP · 229 270 8672 · 🦇 APARTA POR WHATSAPP · 229 270 8672 · </span>
+    <span aria-hidden="true">🦇 APARTA POR WHATSAPP · 229 270 8672 · 🦇 APARTA POR WHATSAPP · 229 270 8672 · 🦇 APARTA POR WHATSAPP · 229 270 8672 · </span>
+  </div>
+</div>
+
+<!-- ══════════ CARTELERA ══════════ -->
+<section class="section section-alt" id="cartelera">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>El material de la campaña</p>
+    <h2 class="title" data-reveal data-glitch="CARTELERA">CARTELERA</h2>
+    <p class="section-sub" data-reveal>Toca cualquiera para verla completa.</p>
+
+    <div class="gallery" id="gallery">
+      <figure class="gi" data-reveal><img src="assets/posters/esqueleto.jpg" alt="Cartel VOLOFEST — esqueleto" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/frankenstein.jpg" alt="Cartel VOLOFEST — Frankenstein" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/scream.jpg" alt="Cartel VOLOFEST — máscara" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/payaso.jpg" alt="Cartel VOLOFEST — payaso" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/jason.jpg" alt="Cartel VOLOFEST — máscara de hockey" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/chucky.jpg" alt="Cartel VOLOFEST — muñeco" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/motosierra.jpg" alt="Cartel VOLOFEST — motosierra" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/calavera.jpg" alt="Cartel VOLOFEST — calavera" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/ovni.jpg" alt="Cartel VOLOFEST — OVNI" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/mano.jpg" alt="Cartel VOLOFEST — mano" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/esqueleto-rojo.jpg" alt="Cartel VOLOFEST — esqueleto rojo" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/exorcista.jpg" alt="Cartel VOLOFEST — casa en la niebla" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/final-chapter.jpg" alt="VOLOFEST — The Final Chapter" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/halloween2026.jpg" alt="VOLOFEST — Halloween 2026" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/posters/playera.jpg" alt="Diseño de playera VOLOFEST" loading="lazy"></figure>
+      <figure class="gi" data-reveal><img src="assets/brand/murcielago-rojo.jpg" alt="VOLOFEST — murciélago" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LUGAR ══════════ -->
+<section class="section" id="lugar">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Dónde nos vemos</p>
+    <h2 class="title" data-reveal data-glitch="EL LUGAR">EL LUGAR</h2>
+
+    <div class="lugar-grid">
+      <div class="lugar-info" data-reveal>
+        <h3 class="lugar-name">Jardín y Salón de Fiestas Las Garzas</h3>
+        <p class="lugar-addr">
+          Hermenegildo Galeana 1028<br>
+          Col. El Coyol, C.P. 91780<br>
+          Veracruz, Ver., México
+        </p>
+
+        <ul class="lugar-meta">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            Sábado 24 de octubre de 2026
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Puertas 6:00 PM · Cierre 1:00 AM
+          </li>
+        </ul>
+
+        <a href="https://maps.app.goo.gl/xYxy5njvpcgduFLm6" target="_blank" rel="noopener" class="btn btn-blood">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+
+      <div class="map-frame" data-reveal>
+        <iframe
+          title="Mapa — Jardín y Salón de Fiestas Las Garzas"
+          src="https://maps.google.com/maps?q=Jard%C3%ADn%20y%20Sal%C3%B3n%20de%20Fiestas%20Las%20Garzas%2C%20Hermenegildo%20Galeana%201028%2C%20El%20Coyol%2C%2091780%20Veracruz&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="cta-final">
+  <div class="cta-bg"><img src="assets/brand/murcielago-blanco.jpg" alt=""></div>
+  <div class="wrap cta-inner">
+    <h2 class="cta-title flicker">NO TE QUEDES FUERA</h2>
+    <p class="cta-sub">Los primeros 50 boletos están a $90. Después sube.</p>
+    <a href="https://wa.me/522292708672?text=Hola!%20Quiero%20apartar%20mis%20boletos%20para%20el%20VOLOFEST%20%F0%9F%A6%87" target="_blank" rel="noopener" class="btn btn-blood btn-lg">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.81.83-3.02-.2-.31A8.2 8.2 0 1 1 12 20.2"/></svg>
+      Apartar por WhatsApp
+    </a>
+    <p class="cta-phone">229 270 8672</p>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="https://www.lavoloband.com" target="_blank" rel="noopener" class="footer-logo">
+      <img src="assets/brand/lavoloband.png" alt="La Voloband">
+    </a>
+    <p class="footer-txt">
+      <strong>VOLOFEST 2026 — The Final Chapter</strong><br>
+      Un evento de La Voloband y allegados · Veracruz, México
+    </p>
+    <a href="https://www.lavoloband.com" target="_blank" rel="noopener" class="footer-link">lavoloband.com →</a>
+  </div>
+</footer>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Cartel ampliado">
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">&#8249;</button>
+  <img src="" alt="" id="lbImg">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">&#8250;</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
