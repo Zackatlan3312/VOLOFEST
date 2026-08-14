@@ -10,7 +10,7 @@ Publicada en **https://volofest.lavoloband.com**
 ## Line-up
 
 La Voloband · Sheriff · Elefantes de Dalí · Seren (SRN)
-Sonido por Raúl David.
+Ingeniero de audio: Raúl David.
 
 > Fuimos Ácidos canceló y ya no aparece en el line-up. Ojo: dos carteles de la
 > campaña (`final-chapter.jpg` y `halloween2026.jpg`) todavía llevan su nombre
