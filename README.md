@@ -9,7 +9,7 @@ Publicada en **https://volofest.lavoloband.com**
 
 ## Line-up
 
-La Voloband · Sheriff · Elefantes de Dalí · Seren (SRN)
+La Voloband · Sheriff · Elefantes de Dalí · Seren (SRN) · VIORS
 Ingeniero de audio: Raúl David.
 
 > Fuimos Ácidos canceló y ya no aparece en el line-up. Ojo: dos carteles de la

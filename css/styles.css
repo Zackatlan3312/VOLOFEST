@@ -443,8 +443,9 @@ ul{ list-style:none; margin:0; padding:0; }
   transition:transform .5s, filter .4s;
 }
 .band:hover .band-logo img{ transform:scale(1.09); }
-.band-logo-lvb{ background:var(--negro); }
-.band-logo-lvb img{ object-fit:contain; padding:20px; }
+/* Logos con transparencia: se muestran completos en vez de recortados. */
+.band-logo--contain{ background:var(--negro); }
+.band-logo--contain img{ object-fit:contain; padding:20px; }
 
 .band h3{
   font-size:1.14rem; font-weight:600; letter-spacing:.04em;
