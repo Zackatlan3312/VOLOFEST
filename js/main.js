@@ -187,7 +187,8 @@
 
   function show(i) {
     idx = (i + shots.length) % shots.length;
-    lbImg.src = shots[idx].src;
+    /* La rejilla usa una miniatura; ampliado hace falta la version grande. */
+    lbImg.src = shots[idx].dataset.full || shots[idx].src;
     lbImg.alt = shots[idx].alt;
 
     /* El botón de descarga reusa el enlace de la tarjeta, así el

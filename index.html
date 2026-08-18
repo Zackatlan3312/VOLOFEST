@@ -22,6 +22,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Pirata+One&display=swap" rel="stylesheet">
 
+<link rel="preload" as="image" href="assets/brand/volofest-logo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/posters/esqueleto.webp" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
 
   <!-- Analytics -->
@@ -39,7 +41,7 @@
 <!-- ══════════ LOADER ══════════ -->
 <div class="loader" id="loader">
   <div class="loader-inner">
-    <img src="assets/brand/volofest-logo.png" alt="" class="loader-logo">
+    <img decoding="async" fetchpriority="high" src="assets/brand/volofest-logo.webp" alt="" class="loader-logo">
     <p class="loader-txt">ABRIENDO LA CRIPTA<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
   </div>
 </div>
@@ -47,7 +49,7 @@
 <!-- ══════════ NAV ══════════ -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav-brand" aria-label="La Voloband — inicio">
-    <img src="assets/brand/lavoloband.png" alt="La Voloband">
+    <img decoding="async" fetchpriority="high" src="assets/brand/lavoloband.webp" alt="La Voloband">
   </a>
 
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -72,14 +74,14 @@
 <!-- ══════════ HERO ══════════ -->
 <header class="hero" id="top">
   <div class="hero-bg" data-parallax>
-    <img src="assets/posters/esqueleto.jpg" alt="" class="hero-img">
+    <img decoding="async" fetchpriority="high" src="assets/posters/esqueleto.webp" alt="" class="hero-img">
   </div>
   <div class="hero-fade"></div>
 
   <div class="hero-content">
     <p class="hero-kicker"><span class="line"></span> LA VOLOBAND PRESENTA <span class="line"></span></p>
 
-    <img src="assets/brand/volofest-logo.png" alt="VOLOFEST" class="hero-logo flicker">
+    <img decoding="async" fetchpriority="high" src="assets/brand/volofest-logo.webp" alt="VOLOFEST" class="hero-logo flicker">
 
     <p class="hero-sub" data-glitch="THE FINAL CHAPTER">THE FINAL CHAPTER</p>
     <p class="hero-tag">EL GRAN EVENTO DE ANIVERSARIO · EDICIÓN HALLOWEEN</p>
@@ -203,7 +205,7 @@
     <div class="lineup-grid">
       <article class="band band-head" data-reveal>
         <div class="band-logo band-logo--contain">
-          <img src="assets/brand/lavoloband.png" alt="La Voloband">
+          <img decoding="async" fetchpriority="high" src="assets/brand/lavoloband.webp" alt="La Voloband">
         </div>
         <h3>La Voloband</h3>
         <p class="band-role">Los del aniversario</p>
@@ -211,25 +213,25 @@
       </article>
 
       <article class="band" data-reveal>
-        <div class="band-logo"><img src="assets/logos/sheriff.jpg" alt="Sheriff"></div>
+        <div class="band-logo"><img decoding="async" loading="lazy" src="assets/logos/sheriff.webp" alt="Sheriff"></div>
         <h3>Sheriff</h3>
         <p class="band-role">Banda invitada</p>
       </article>
 
       <article class="band" data-reveal>
-        <div class="band-logo"><img src="assets/logos/elefantes-de-dali.jpg" alt="Elefantes de Dalí"></div>
+        <div class="band-logo"><img decoding="async" loading="lazy" src="assets/logos/elefantes-de-dali.webp" alt="Elefantes de Dalí"></div>
         <h3>Elefantes de Dalí</h3>
         <p class="band-role">Banda invitada</p>
       </article>
 
       <article class="band" data-reveal>
-        <div class="band-logo"><img src="assets/logos/srn.jpg" alt="Seren"></div>
+        <div class="band-logo"><img decoding="async" loading="lazy" src="assets/logos/srn.webp" alt="Seren"></div>
         <h3>Seren <span class="band-alt">(SRN)</span></h3>
         <p class="band-role">Banda invitada</p>
       </article>
 
       <article class="band" data-reveal>
-        <div class="band-logo band-logo--contain"><img src="assets/logos/viors.png" alt="VIORS"></div>
+        <div class="band-logo band-logo--contain"><img decoding="async" loading="lazy" src="assets/logos/viors.webp" alt="VIORS"></div>
         <h3>VIORS</h3>
         <p class="band-role">Banda invitada</p>
       </article>
@@ -316,67 +318,67 @@
 
     <div class="gallery" id="gallery">
       <figure class="gi" data-reveal>
-        <img src="assets/posters/esqueleto.jpg" alt="Cartel VOLOFEST — esqueleto" loading="lazy">
+        <img decoding="async" data-full="assets/posters/esqueleto.webp" src="assets/posters/esqueleto-mini.webp" alt="Cartel VOLOFEST — esqueleto" loading="lazy">
         <a class="gi-dl" href="assets/posters/esqueleto.jpg" download="VOLOFEST-esqueleto.jpg" title="Descargar cartel" aria-label="Descargar cartel: esqueleto"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/frankenstein.jpg" alt="Cartel VOLOFEST — Frankenstein" loading="lazy">
+        <img decoding="async" data-full="assets/posters/frankenstein.webp" src="assets/posters/frankenstein-mini.webp" alt="Cartel VOLOFEST — Frankenstein" loading="lazy">
         <a class="gi-dl" href="assets/posters/frankenstein.jpg" download="VOLOFEST-frankenstein.jpg" title="Descargar cartel" aria-label="Descargar cartel: Frankenstein"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/scream.jpg" alt="Cartel VOLOFEST — máscara" loading="lazy">
+        <img decoding="async" data-full="assets/posters/scream.webp" src="assets/posters/scream-mini.webp" alt="Cartel VOLOFEST — máscara" loading="lazy">
         <a class="gi-dl" href="assets/posters/scream.jpg" download="VOLOFEST-mascara.jpg" title="Descargar cartel" aria-label="Descargar cartel: máscara"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/payaso.jpg" alt="Cartel VOLOFEST — payaso" loading="lazy">
+        <img decoding="async" data-full="assets/posters/payaso.webp" src="assets/posters/payaso-mini.webp" alt="Cartel VOLOFEST — payaso" loading="lazy">
         <a class="gi-dl" href="assets/posters/payaso.jpg" download="VOLOFEST-payaso.jpg" title="Descargar cartel" aria-label="Descargar cartel: payaso"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/jason.jpg" alt="Cartel VOLOFEST — máscara de hockey" loading="lazy">
+        <img decoding="async" data-full="assets/posters/jason.webp" src="assets/posters/jason-mini.webp" alt="Cartel VOLOFEST — máscara de hockey" loading="lazy">
         <a class="gi-dl" href="assets/posters/jason.jpg" download="VOLOFEST-hockey.jpg" title="Descargar cartel" aria-label="Descargar cartel: máscara de hockey"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/chucky.jpg" alt="Cartel VOLOFEST — muñeco" loading="lazy">
+        <img decoding="async" data-full="assets/posters/chucky.webp" src="assets/posters/chucky-mini.webp" alt="Cartel VOLOFEST — muñeco" loading="lazy">
         <a class="gi-dl" href="assets/posters/chucky.jpg" download="VOLOFEST-muneco.jpg" title="Descargar cartel" aria-label="Descargar cartel: muñeco"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/motosierra.jpg" alt="Cartel VOLOFEST — motosierra" loading="lazy">
+        <img decoding="async" data-full="assets/posters/motosierra.webp" src="assets/posters/motosierra-mini.webp" alt="Cartel VOLOFEST — motosierra" loading="lazy">
         <a class="gi-dl" href="assets/posters/motosierra.jpg" download="VOLOFEST-motosierra.jpg" title="Descargar cartel" aria-label="Descargar cartel: motosierra"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/calavera.jpg" alt="Cartel VOLOFEST — calavera" loading="lazy">
+        <img decoding="async" data-full="assets/posters/calavera.webp" src="assets/posters/calavera-mini.webp" alt="Cartel VOLOFEST — calavera" loading="lazy">
         <a class="gi-dl" href="assets/posters/calavera.jpg" download="VOLOFEST-calavera.jpg" title="Descargar cartel" aria-label="Descargar cartel: calavera"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/ovni.jpg" alt="Cartel VOLOFEST — OVNI" loading="lazy">
+        <img decoding="async" data-full="assets/posters/ovni.webp" src="assets/posters/ovni-mini.webp" alt="Cartel VOLOFEST — OVNI" loading="lazy">
         <a class="gi-dl" href="assets/posters/ovni.jpg" download="VOLOFEST-ovni.jpg" title="Descargar cartel" aria-label="Descargar cartel: OVNI"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/mano.jpg" alt="Cartel VOLOFEST — mano" loading="lazy">
+        <img decoding="async" data-full="assets/posters/mano.webp" src="assets/posters/mano-mini.webp" alt="Cartel VOLOFEST — mano" loading="lazy">
         <a class="gi-dl" href="assets/posters/mano.jpg" download="VOLOFEST-mano.jpg" title="Descargar cartel" aria-label="Descargar cartel: mano"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/esqueleto-rojo.jpg" alt="Cartel VOLOFEST — esqueleto rojo" loading="lazy">
+        <img decoding="async" data-full="assets/posters/esqueleto-rojo.webp" src="assets/posters/esqueleto-rojo-mini.webp" alt="Cartel VOLOFEST — esqueleto rojo" loading="lazy">
         <a class="gi-dl" href="assets/posters/esqueleto-rojo.jpg" download="VOLOFEST-esqueleto-rojo.jpg" title="Descargar cartel" aria-label="Descargar cartel: esqueleto rojo"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/exorcista.jpg" alt="Cartel VOLOFEST — casa en la niebla" loading="lazy">
+        <img decoding="async" data-full="assets/posters/exorcista.webp" src="assets/posters/exorcista-mini.webp" alt="Cartel VOLOFEST — casa en la niebla" loading="lazy">
         <a class="gi-dl" href="assets/posters/exorcista.jpg" download="VOLOFEST-niebla.jpg" title="Descargar cartel" aria-label="Descargar cartel: casa en la niebla"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/final-chapter.jpg" alt="VOLOFEST — The Final Chapter" loading="lazy">
+        <img decoding="async" data-full="assets/posters/final-chapter.webp" src="assets/posters/final-chapter-mini.webp" alt="VOLOFEST — The Final Chapter" loading="lazy">
         <a class="gi-dl" href="assets/posters/final-chapter.jpg" download="VOLOFEST-the-final-chapter.jpg" title="Descargar cartel" aria-label="Descargar cartel: The Final Chapter"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/halloween2026.jpg" alt="VOLOFEST — Halloween 2026" loading="lazy">
+        <img decoding="async" data-full="assets/posters/halloween2026.webp" src="assets/posters/halloween2026-mini.webp" alt="VOLOFEST — Halloween 2026" loading="lazy">
         <a class="gi-dl" href="assets/posters/halloween2026.jpg" download="VOLOFEST-halloween-2026.jpg" title="Descargar cartel" aria-label="Descargar cartel: Halloween 2026"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/posters/playera.jpg" alt="Diseño de playera VOLOFEST" loading="lazy">
+        <img decoding="async" data-full="assets/posters/playera.webp" src="assets/posters/playera-mini.webp" alt="Diseño de playera VOLOFEST" loading="lazy">
         <a class="gi-dl" href="assets/posters/playera.jpg" download="VOLOFEST-playera.jpg" title="Descargar diseño" aria-label="Descargar diseño de playera"></a>
       </figure>
       <figure class="gi" data-reveal>
-        <img src="assets/brand/murcielago-rojo.jpg" alt="VOLOFEST — murciélago" loading="lazy">
+        <img decoding="async" data-full="assets/brand/murcielago-rojo.webp" src="assets/brand/murcielago-rojo-mini.webp" alt="VOLOFEST — murciélago" loading="lazy">
         <a class="gi-dl" href="assets/brand/murcielago-rojo.jpg" download="VOLOFEST-murcielago.jpg" title="Descargar cartel" aria-label="Descargar cartel: murciélago"></a>
       </figure>
     </div>
@@ -429,7 +431,7 @@
 
 <!-- ══════════ CTA FINAL ══════════ -->
 <section class="cta-final">
-  <div class="cta-bg"><img src="assets/brand/murcielago-blanco.jpg" alt=""></div>
+  <div class="cta-bg"><img decoding="async" loading="lazy" src="assets/brand/murcielago-blanco.webp" alt=""></div>
   <div class="wrap cta-inner">
     <h2 class="cta-title flicker">NO TE QUEDES FUERA</h2>
     <p class="cta-sub">Los primeros 50 boletos están a $90. Después sube.</p>
@@ -445,7 +447,7 @@
 <footer class="footer">
   <div class="wrap footer-inner">
     <a href="https://www.lavoloband.com" target="_blank" rel="noopener" class="footer-logo">
-      <img src="assets/brand/lavoloband.png" alt="La Voloband">
+      <img decoding="async" fetchpriority="high" src="assets/brand/lavoloband.webp" alt="La Voloband">
     </a>
     <p class="footer-txt">
       <strong>VOLOFEST 2026 — The Final Chapter</strong><br>
