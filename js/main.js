@@ -252,4 +252,43 @@
     touchX = null;
   }, { passive: true });
 
+  /* ─────── MODAL DE TÉRMINOS ─────── */
+  var terms = document.getElementById('terminos');
+
+  if (terms) {
+    var termsBody = terms.querySelector('.modal-body');
+    var termsClose = terms.querySelector('.modal-close');
+    var lastFocus = null;
+
+    var openTerms = function (e) {
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      terms.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      termsBody.scrollTop = 0;
+      termsClose.focus();
+    };
+
+    var closeTerms = function () {
+      terms.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+
+    document.querySelectorAll('[data-terms]').forEach(function (btn) {
+      btn.addEventListener('click', openTerms);
+    });
+
+    termsClose.addEventListener('click', closeTerms);
+
+    /* Clic en el fondo oscuro también cierra. */
+    terms.addEventListener('click', function (e) {
+      if (e.target === terms) closeTerms();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && terms.classList.contains('open')) closeTerms();
+    });
+  }
+
 })();
