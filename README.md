@@ -2,6 +2,12 @@
 
 Landing del **VOLOFEST**, el evento de aniversario de La Voloband, edición Halloween / disfraces.
 
+> **Estado actual:** la primera edición ya pasó. La página quedó reducida a una
+> sola pantalla de "Próximamente · Segunda edición" (logo, mensaje y enlace a
+> lavoloband.com). La versión completa del evento 2026 (line-up, boletos,
+> cartelera, lugar, términos) sigue en el historial de git, en el commit
+> `6decbeb`, por si se quiere reusar para la segunda edición.
+
 **Sábado 24 de octubre de 2026 · 6:00 PM – 1:00 AM**
 Jardín y Salón de Fiestas Las Garzas — Hermenegildo Galeana 1028, El Coyol, Veracruz.
 

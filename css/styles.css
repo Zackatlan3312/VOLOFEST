@@ -295,6 +295,28 @@ ul{ list-style:none; margin:0; padding:0; }
 @keyframes shDrop{ 0%{transform:translateY(-100%)} 60%,100%{transform:translateY(100%)} }
 
 
+/* Próximamente: la página entera es este hero */
+.hero-soon{ padding:40px 0 110px; }
+.soon-title{ margin:22px 0 0; font-weight:inherit; }
+.soon-kicker{
+  display:block;
+  font-family:var(--disp); font-weight:600; font-size:clamp(1.1rem,3.6vw,1.7rem);
+  letter-spacing:.42em; text-indent:.42em; text-transform:uppercase;
+  color:var(--hueso); margin-bottom:12px;
+  text-shadow:0 0 18px rgba(233,229,220,.25);
+}
+.soon-main{
+  font-family:var(--goth); font-size:clamp(2.4rem,9vw,5.6rem); line-height:1;
+  letter-spacing:.05em; color:var(--sangre-viva);
+  text-shadow:0 0 34px rgba(224,27,36,.55);
+}
+.soon-brand{
+  position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:3;
+}
+.soon-brand img{ height:52px; width:auto; opacity:.7; transition:opacity .3s, filter .3s; }
+.soon-brand:hover img{ opacity:1; filter:drop-shadow(0 0 12px var(--sangre-viva)); }
+
+
 /* ═══════ BOTONES ═══════ */
 
 .btn{

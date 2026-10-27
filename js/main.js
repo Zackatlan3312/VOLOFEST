@@ -1,15 +1,12 @@
 /* ═══════════════════════════════════════════
-   VOLOFEST 2026 — La Voloband
+   VOLOFEST — La Voloband
+   Página de "Próximamente segunda edición"
    ═══════════════════════════════════════════ */
 
 (function () {
   'use strict';
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Marca que el JS sí corre: habilita el estado inicial oculto del reveal.
-     Sin esto, el CSS deja todo visible por defecto. */
-  document.documentElement.classList.add('js');
 
   /* ─────── LOADER ─────── */
   window.addEventListener('load', function () {
@@ -18,114 +15,6 @@
       if (l) l.classList.add('gone');
     }, 700);
   });
-
-  /* ─────── NAV ─────── */
-  var nav = document.getElementById('nav');
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-
-  window.addEventListener('scroll', function () {
-    nav.classList.toggle('stuck', window.scrollY > 40);
-  }, { passive: true });
-
-  navToggle.addEventListener('click', function () {
-    var open = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open', open);
-    navToggle.setAttribute('aria-expanded', String(open));
-  });
-
-  navLinks.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  /* ─────── CUENTA REGRESIVA ───────
-     Sábado 24 de octubre de 2026, 18:00 hrs (Veracruz, UTC-6)  */
-  var TARGET = new Date('2026-10-24T18:00:00-06:00').getTime();
-
-  var cd = {
-    d: document.getElementById('cdD'),
-    h: document.getElementById('cdH'),
-    m: document.getElementById('cdM'),
-    s: document.getElementById('cdS')
-  };
-
-  function pad(n) { return n < 10 ? '0' + n : String(n); }
-
-  function tick() {
-    var diff = TARGET - Date.now();
-
-    if (diff <= 0) {
-      var box = document.getElementById('countdown');
-      if (box) {
-        box.innerHTML = '<p style="font-family:var(--goth);font-size:2rem;' +
-          'color:var(--sangre-viva);margin:0;letter-spacing:.06em">' +
-          'ES HOY. NOS VEMOS EN LAS GARZAS.</p>';
-      }
-      clearInterval(timer);
-      return;
-    }
-
-    var s = Math.floor(diff / 1000);
-    cd.d.textContent = pad(Math.floor(s / 86400));
-    cd.h.textContent = pad(Math.floor(s / 3600) % 24);
-    cd.m.textContent = pad(Math.floor(s / 60) % 60);
-    cd.s.textContent = pad(s % 60);
-  }
-
-  tick();
-  var timer = setInterval(tick, 1000);
-
-  /* ─────── REVEAL AL SCROLL ─────── */
-  var revealables = document.querySelectorAll('[data-reveal]');
-
-  if ('IntersectionObserver' in window && !reduced) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e, i) {
-        if (!e.isIntersecting) return;
-        var el = e.target;
-        setTimeout(function () { el.classList.add('in'); }, (i % 6) * 70);
-        io.unobserve(el);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-
-    revealables.forEach(function (el) { io.observe(el); });
-
-    /* Red de seguridad: si la pestaña cargó en segundo plano o el observer
-       nunca dispara, nada queda invisible. */
-    var sweep = function () {
-      revealables.forEach(function (el) {
-        var r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight * 1.5) el.classList.add('in');
-      });
-    };
-    setTimeout(sweep, 2500);
-    document.addEventListener('visibilitychange', function () {
-      if (!document.hidden) setTimeout(sweep, 400);
-    });
-  } else {
-    revealables.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  /* ─────── PARALLAX DEL HERO ─────── */
-  var parallax = document.querySelector('[data-parallax]');
-  if (parallax && !reduced) {
-    var ticking = false;
-    window.addEventListener('scroll', function () {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(function () {
-        var y = window.scrollY;
-        if (y < window.innerHeight * 1.2) {
-          parallax.style.transform = 'translateY(' + (y * 0.32) + 'px)';
-        }
-        ticking = false;
-      });
-    }, { passive: true });
-  }
 
   /* ─────── RELÁMPAGOS ─────── */
   var bolt = document.getElementById('lightning');
@@ -174,121 +63,6 @@
     setInterval(function () {
       if (Math.random() > 0.35) launchBat();
     }, 6500);
-  }
-
-  /* ─────── LIGHTBOX DE CARTELERA ─────── */
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lbImg');
-  var lbDl = document.getElementById('lbDl');
-  var shots = Array.prototype.slice.call(
-    document.querySelectorAll('#gallery .gi img')
-  );
-  var idx = 0;
-
-  function show(i) {
-    idx = (i + shots.length) % shots.length;
-    /* La rejilla usa una miniatura; ampliado hace falta la version grande. */
-    lbImg.src = shots[idx].dataset.full || shots[idx].src;
-    lbImg.alt = shots[idx].alt;
-
-    /* El botón de descarga reusa el enlace de la tarjeta, así el
-       nombre del archivo es el mismo en la galería y en el lightbox. */
-    var card = shots[idx].parentElement.querySelector('.gi-dl');
-    if (card) {
-      lbDl.href = card.getAttribute('href');
-      lbDl.setAttribute('download', card.getAttribute('download'));
-    }
-  }
-
-  function openLb(i) {
-    show(i);
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLb() {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-    lbImg.src = '';
-  }
-
-  shots.forEach(function (img, i) {
-    img.parentElement.addEventListener('click', function (e) {
-      /* Descargar no debe abrir el lightbox. */
-      if (e.target.closest('.gi-dl')) return;
-      openLb(i);
-    });
-  });
-
-  /* Ni cerrarlo cuando se descarga desde adentro. */
-  lbDl.addEventListener('click', function (e) { e.stopPropagation(); });
-
-  document.getElementById('lbClose').addEventListener('click', closeLb);
-  document.getElementById('lbPrev').addEventListener('click', function (e) {
-    e.stopPropagation(); show(idx - 1);
-  });
-  document.getElementById('lbNext').addEventListener('click', function (e) {
-    e.stopPropagation(); show(idx + 1);
-  });
-  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
-
-  document.addEventListener('keydown', function (e) {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowLeft') show(idx - 1);
-    if (e.key === 'ArrowRight') show(idx + 1);
-  });
-
-  /* Swipe en móvil */
-  var touchX = null;
-  lb.addEventListener('touchstart', function (e) {
-    touchX = e.changedTouches[0].clientX;
-  }, { passive: true });
-
-  lb.addEventListener('touchend', function (e) {
-    if (touchX === null) return;
-    var dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 55) show(dx > 0 ? idx - 1 : idx + 1);
-    touchX = null;
-  }, { passive: true });
-
-  /* ─────── MODAL DE TÉRMINOS ─────── */
-  var terms = document.getElementById('terminos');
-
-  if (terms) {
-    var termsBody = terms.querySelector('.modal-body');
-    var termsClose = terms.querySelector('.modal-close');
-    var lastFocus = null;
-
-    var openTerms = function (e) {
-      if (e) e.preventDefault();
-      lastFocus = document.activeElement;
-      terms.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      termsBody.scrollTop = 0;
-      termsClose.focus();
-    };
-
-    var closeTerms = function () {
-      terms.classList.remove('open');
-      document.body.style.overflow = '';
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
-    };
-
-    document.querySelectorAll('[data-terms]').forEach(function (btn) {
-      btn.addEventListener('click', openTerms);
-    });
-
-    termsClose.addEventListener('click', closeTerms);
-
-    /* Clic en el fondo oscuro también cierra. */
-    terms.addEventListener('click', function (e) {
-      if (e.target === terms) closeTerms();
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && terms.classList.contains('open')) closeTerms();
-    });
   }
 
 })();
